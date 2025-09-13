@@ -15,12 +15,12 @@ body {
 
 /* Header */
 .header {
-  position: absolute; /* On top of background */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.85); /* Slight transparency */
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 0 0 12px 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   transition: all 0.3s ease-in-out;
@@ -47,10 +47,20 @@ body {
   gap: 12px;
 }
 .logo-img { height: 40px; }
-.logo-text { font-size: 1.5rem; font-weight: 600; color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
 
 /* Desktop Navigation */
-.nav-links { display: flex; list-style: none; gap: 35px; align-items: center; }
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  align-items: center;
+}
 
 .nav-links li a,
 .dropbtn {
@@ -67,7 +77,10 @@ body {
 }
 
 .nav-links li a:hover,
-.dropbtn:hover { color: #FFD700; transform: translateY(-2px); }
+.dropbtn:hover {
+  color: #FFD700;
+  transform: translateY(-2px);
+}
 
 /* Dropdown */
 .dropdown { position: relative; }
@@ -86,16 +99,34 @@ body {
 
 .dropdown:hover .dropdown-content { display: block; }
 
-.dropdown-content li a { display: block; padding: 10px 20px; color: #333; font-weight: 500; }
+.dropdown-content li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-weight: 500;
+}
 .dropdown-content li a:hover { background: #f0f0f0; }
 
 /* Mobile */
-.mobile-menu-icon { display: none; font-size: 1.8rem; cursor: pointer; color: #fff; }
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #000; /* black by default */
+  transition: color 0.3s;
+}
+.mobile-menu-icon:hover {
+  color: #FFD700; /* gold on hover */
+}
+
 .mobile-menu { display: none; }
 
 @media (max-width: 900px) {
   .nav { display: none; }
-  .mobile-menu-icon { display: block; }
+  .mobile-menu-icon {
+    display: block;
+    color: #000; /* force black on mobile */
+  }
 
   .mobile-menu {
     display: block;
@@ -121,8 +152,17 @@ body {
     align-items: center;
   }
 
-  .mobile-submenu { list-style: none; padding-left: 15px; margin-top: 5px; }
-  .mobile-submenu li a { padding: 6px 0; display: block; font-size: 0.95rem; color: #333; }
+  .mobile-submenu {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+  .mobile-submenu li a {
+    padding: 6px 0;
+    display: block;
+    font-size: 0.95rem;
+    color: #333;
+  }
 }
 
 /* Floating Donate Button */
@@ -130,7 +170,7 @@ body {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background: #FFD700; /* Gold color */
+  background: #FFD700;
   color: #333;
   font-weight: 600;
   padding: 14px 22px;
@@ -144,9 +184,10 @@ body {
 .floating-donate-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  background: #FFC107; /* Slight hover change */
+  background: #FFC107;
 }
-/* Make dropdown buttons clickable */
+
+/* Dropdown buttons clickable */
 .dropdown-content li button {
   display: block;
   width: 100%;
@@ -162,6 +203,4 @@ body {
   transition: background 0.3s;
 }
 
-.dropdown-content li button:hover {
-  background: #f0f0f0;
-}
+.dropdown-content li button:hover { background: #f0f0f0; }
